@@ -26,10 +26,17 @@ public class Gaulois {
 	public String toString() {
 		return "Gaulois [nom=" + nom + ", force=" + force
 				+ ", effetPotion=" + effetPotion + "]";
-
 	}
 	public static void main(String[] args) {
-		//TODO créer un main permettant de tester la classe Gaulois
+		Gaulois asterix = new Gaulois("Astérix", 8);
+		Romain brutus = new Romain("Brutus", 4);
+		System.out.println(asterix);
+		System.out.println(brutus);
+//		System.out.println(asterix.prendreParole());
+		asterix.parler("Moi, je suis tranquille ! Jamais une femme ne pourra me remplacer. "
+						+ "Tailler des menhirs, c'est un travail bien trop délicat !");
+		brutus.parler("Les menhirs ne sont rien d'autre que des rochers !");
+		asterix.frapper(brutus);
 	}
 }
 
