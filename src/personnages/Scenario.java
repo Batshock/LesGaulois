@@ -10,9 +10,5 @@ public class Scenario {
 		while (minus.getForce() > 0) {
 			asterix.frapper(minus);
 		}
-		
-		// TODO Auto-generated method stub
-
 	}
-
 }
