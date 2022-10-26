@@ -4,6 +4,7 @@ public class Romain {
 	private String nom;
 	private int force;
 	public Romain(String nom, int force) {
+		assert force >= 0; //La force doit être positive
 		this.nom = nom;
 		this.force = force;
 	}
@@ -20,12 +21,15 @@ public class Romain {
 		return "Le romain " + nom + " : ";
 	}
 	public void recevoirCoup(int forceCoup) {
+		assert force >= 0; //La force doit être positive
+		int forceInit = force;
 		force -= forceCoup;
 		if (force > 0) {
 			parler("Aïe");
 		} else {
 			parler("J'abandonne...");
 		}
+		assert forceInit > force;
 	}
 	@Override
 	public String toString() {
