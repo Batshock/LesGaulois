@@ -3,6 +3,9 @@ package personnages;
 public class Romain {
 	private String nom;
 	private int force;
+	private Equipement[] equipement = new Equipement[2];
+	private int nbEquipement = 0;
+	
 	public Romain(String nom, int force) {
 		assert force >= 0; //La force doit être positive
 		this.nom = nom;
@@ -31,6 +34,12 @@ public class Romain {
 		}
 		assert forceInit > force;
 	}
+//	public void sEquiper(Equipement equipement, int nbEquipement) {
+//		switch(equipement) {
+//		case BOUCLIER:
+//		}
+//	}
+	
 	@Override
 	public String toString() {
 		return "Romain [nom=" + nom + ", force=" + force+"]";
@@ -45,5 +54,7 @@ public class Romain {
 						+ "Tailler des menhirs, c'est un travail bien trop délicat !");
 		brutus.parler("Les menhirs ne sont rien d'autre que des rochers !");
 		brutus.recevoirCoup(4);
+		System.out.println(Equipement.BOUCLIER);
+		System.out.println(Equipement.CASQUE);
 	}
 }
